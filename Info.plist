@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Tom Malone</string>
+	<key>Builder Version</key>
+	<string>11601.6.17</string>
+	<key>CFBundleDisplayName</key>
+	<string>UrbanDictionary_Lookup_Extension</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.yourcompany.urbandictionarylookupextension</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Context Menu Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>lookupAtUrbanDictionary</string>
+				<key>Identifier</key>
+				<string>UrbanDictionaryLookup</string>
+				<key>Title</key>
+				<string>Search Urban Dictionary</string>
+			</dict>
+		</array>
+		<key>Global Page</key>
+		<string>global_page.html</string>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>Start</key>
+			<array>
+				<string>urban_dict_start.js</string>
+			</array>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>Performs an Urban Dictionary lookup on the selected text</string>
+	<key>DeveloperIdentifier</key>
+	<string>0000000000</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+	<key>Website</key>
+	<string>https://github.com/tommytwoeyes</string>
+</dict>
+</plist>

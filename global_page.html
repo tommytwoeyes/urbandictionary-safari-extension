@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Urban Dictionary Lookup</title>
+    <script type="text/javascript">
+
+      function performUrbanDictionaryLookup(e) {
+          if(e.command == "lookupAtUrbanDictionary") {
+            safari.application.activeBrowserWindow.activeTab.page.dispatchMessage("getUserSelection");
+          }
+      }
+
+      function handleResponseMessage(msg) {
+          if(msg.name === "userSelectedText") {
+              var queryTerm = msg.message;
+              var urbanDictionaryUrl = 'http://urbandictionary.com/define.php?term=' + queryTerm;
+              openTab(urbanDictionaryUrl);
+          }
+      }
+
+      function openTab(url) {
+        var newTab = safari.application.activeBrowserWindow.openTab(); // Open a new tab
+        newTab.url = url;
+        tab.activate();
+      }
+
+      safari.application.addEventListener("command", performUrbanDictionaryLookup, false);
+      safari.application.addEventListener("message", handleResponseMessage, false);
+    </script>
+  </head>
+  <body>
+    <h1>Safari Extension</h1>
+    <h3>Context Menu Item</h3>
+    <p>Urban Dictionary Lookup</p>
+  </body>
+</html>
